@@ -1,8 +1,6 @@
-/** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
     colors: {
       transparent: "transparent",
       white: "#ffffff",
@@ -12,7 +10,8 @@ export default {
       "text-primary": "var(--text-primary)",
       "text-secondary": "var(--text-secondary)",
       "accent-primary": "var(--accent-primary)",
-      "accent-secondary": "var(--accent-secondary)"
+      "accent-secondary": "var(--accent-secondary)",
+      error: "var(--error)"
     }
   },
   plugins: []

@@ -1,7 +1,5 @@
-import { JSXInternal } from "preact/src/jsx";
-
-export function Image(props: JSXInternal.HTMLAttributes<HTMLImageElement>) {
-  function observe(elm: any) {
+export function Image(props: { src: string; className: string; alt: string }) {
+  function observe(elm: HTMLImageElement | null) {
     if (elm && elm instanceof HTMLImageElement) {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -20,7 +18,7 @@ export function Image(props: JSXInternal.HTMLAttributes<HTMLImageElement>) {
   return (
     <img
       data-src={props.src}
-      class={props.class}
+      className={props.className}
       alt={props.alt}
       ref={observe}
     />
